@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Vuetify from 'vuetify'
 import  Auth from './auth/auth'
 
 
@@ -11,6 +12,7 @@ import routes from './router/routes'
 
 //Setup Plugins
 Vue.use(VueRouter)
+Vue.use(Vuetify)
 
 //Configure Router
 const router = new VueRouter({
@@ -19,7 +21,7 @@ const router = new VueRouter({
 })
 
 //Verificando Login
-router.beforeEach((to, from, next) => {
+/*router.beforeEach((to, from, next) => {
   if(to.matched.some(record => record.meta.requiresAuth)) {
     if(!Auth.hasToken()){
       console.log('não logado')
@@ -34,11 +36,12 @@ router.beforeEach((to, from, next) => {
   } else {
     next()
   }
-})
+})*/
 
 //Config to Dev
 Vue.config.productionTip = false
 
+import('../node_modules/vuetify/dist/vuetify.min.css') // Ensure you are using css-loader
 
 //Create Vue Instance
 new Vue({
