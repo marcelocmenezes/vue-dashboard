@@ -14,14 +14,6 @@
         <span class="hidden-xs-only">Dashboard Material</span>
       </v-toolbar-title>
       
-      <v-text-field
-        light
-        solo
-        prepend-icon="search"
-        placeholder="Search"
-        style="max-width: 500px; min-width: 128px"
-      ></v-text-field>
-      
       <div class="d-flex align-center" style="margin-left: auto">
         <v-btn icon>
           <v-icon>notifications</v-icon>
@@ -89,7 +81,11 @@ import SideBarItems from './sidebar'
       return {
         drawer: null,
         items: SideBarItems,
-        userInfo: { name: 'Marcelo Menezes', type: 'Developer', avatar: 'https://avatars1.githubusercontent.com/u/8910193?s=460&v=4' }
+        userInfo: { name: 'Marcelo Menezes', type: 'Developer', avatar: 'https://avatars1.githubusercontent.com/u/8910193?s=460&v=4' },
+        search: '',
+        childData: {
+          barSearch: this.search
+        }
       }
     }
   }
