@@ -102,7 +102,7 @@
 
 <script>
 
-import SideBarItems from './Sidebar/sidebar'
+import SideBarItems from './sidebar'
 
   export default {
     data: () => {
