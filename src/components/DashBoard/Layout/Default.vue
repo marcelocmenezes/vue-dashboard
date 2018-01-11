@@ -46,10 +46,12 @@
         <v-list class="pa-0">
           <v-list-tile avatar>
             <v-list-tile-avatar>
-              <img src="https://randomuser.me/api/portraits/men/85.jpg" />
+              <img v-bind:src="userInfo.avatar"/>
             </v-list-tile-avatar>
             <v-list-tile-content>
-              <v-list-tile-title>John Leider</v-list-tile-title>
+              <v-list-tile-title v-html="userInfo.name"></v-list-tile-title>
+              <v-list-tile-sub-title v-html="userInfo.type"></v-list-tile-sub-title>
+
             </v-list-tile-content>
           </v-list-tile>
         </v-list>
@@ -86,8 +88,9 @@ import SideBarItems from './sidebar'
     data: () => {
       return {
         drawer: null,
-        items: SideBarItems
+        items: SideBarItems,
+        userInfo: { name: 'Marcelo Menezes', type: 'Developer', avatar: 'https://avatars1.githubusercontent.com/u/8910193?s=460&v=4' }
       }
-    }    
+    }
   }
 </script>
