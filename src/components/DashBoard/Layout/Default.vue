@@ -84,7 +84,7 @@
 
 import SideBarItems from './sidebar'
 
-  export default {
+  export default {  
     data: () => {
       return {
         drawer: null,
