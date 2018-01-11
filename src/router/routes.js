@@ -1,33 +1,19 @@
-//Default Layout
-import DashboardLayout from '../components/DashBoard/Layout/Default.vue'
+import Dashboard from './dashboard'
 
-//Login Page
+// Importando os components
 import LoginPage from '../components/GeneralViews/Login.vue'
-
-//404 - Page Not Found
 import NotFound from '../components/GeneralViews/PageNotFound.vue'
+
 
 //Configure Routes
 const routes = [
-  {
-    path: '/',
-    component: DashboardLayout,
-    redirect: '/admin',
-    
-  },
+  { path: '/', redirect: '/admin' },
   
-  {
-    path: '/admin',
-    component: DashboardLayout,
-    meta: { requiresAuth: true }
-       
-  },
-
   { path: '/auth/login', component: LoginPage },
-
-  { path: '*',  component: NotFound }
-
-
+  
+  { path: '*',  component: NotFound },
+  
+  Dashboard  
 ]
 
 export default routes

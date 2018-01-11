@@ -1,17 +1,7 @@
 <template>
-  <div class="wrapper wrapper-full-page section content">
-      <div class="">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center">
-              <h2 class="title text-danger">404 Not Found</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+ <h1>404</h1>
 </template>
 
-<<script>
+<script>
 export default {}
 </script>
