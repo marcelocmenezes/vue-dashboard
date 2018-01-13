@@ -2,8 +2,15 @@
 
   <v-content>
     <v-container fluid fill-height>
-      <v-layout justify-center align-center>
-        
+      <v-layout row class="mb-2">
+        <h1></h1>
+        <v-spacer></v-spacer>
+        <v-text-field
+              append-icon="search"
+              single-line
+              hide-details
+              v-model="search"
+            ></v-text-field>
       </v-layout>
     </v-container>
 

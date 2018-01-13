@@ -2,8 +2,12 @@
 
   <v-content>
     <v-container fluid fill-height>
-      <v-layout justify-center align-center>
-        <h1>Overview</h1>
+      <v-layout row class="mb-2">
+        <h1>Visão Geral</h1>
+      </v-layout>
+
+      <v-layout row>
+        <doughnut :chart-data="renderChart"></doughnut>
       </v-layout>
     </v-container>
 
@@ -16,7 +20,9 @@
 </template>
 
 <script>
+
 export default {
+
 
 }
 </script>
