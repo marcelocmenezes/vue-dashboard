@@ -11,7 +11,7 @@
     >
       <v-toolbar-title :style="$vuetify.breakpoint.smAndUp ? 'width: 300px; min-width: 250px' : 'min-width: 72px'" class="ml-0 pl-3">
         <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-        <span class="hidden-xs-only">Dashboard Material</span>
+        <span class="hidden-xs-only">Dashboard</span>
       </v-toolbar-title>
       
       <div class="d-flex align-center" style="margin-left: auto">
@@ -90,3 +90,7 @@ import SideBarItems from './sidebar'
     }
   }
 </script>
+<style>
+.snotify-icon { display: none; }
+
+</style>

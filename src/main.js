@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Vuetify from 'vuetify'
-import  Auth from './auth/auth'
+//import  Auth from './auth/auth'
+import Snotify from 'vue-snotify'
 
 
 //Globals Plugins
@@ -13,6 +14,7 @@ import routes from './router/routes'
 //Setup Plugins
 Vue.use(VueRouter)
 Vue.use(Vuetify)
+Vue.use(Snotify)
 
 //Configure Router
 const router = new VueRouter({
@@ -41,6 +43,7 @@ const router = new VueRouter({
 //Config to Dev
 Vue.config.productionTip = false
 
+import 'vue-snotify/styles/material.css'
 import('../node_modules/vuetify/dist/vuetify.min.css') // Ensure you are using css-loader
 
 //Create Vue Instance

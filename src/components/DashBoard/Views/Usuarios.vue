@@ -3,7 +3,7 @@
     <v-container fluid>
       <v-layout row class="mb-2">
         <v-flex>
-          <h1>Clientes</h1>
+          <h1>Usuários</h1>
           
         </v-flex>
       </v-layout>
@@ -34,12 +34,16 @@
             >
               <template slot="items" slot-scope="props">
                 <td>{{ props.item.nome }}</td>
+                <td>{{ props.item.email }}</td>
                 <td>{{ props.item.rg }}</td>
                 <td>{{ props.item.cpf }}</td>
                 <td>{{ props.item.idade }}</td>
+                <td ma-0 pa-0><span v-if="props.item.tipo == 1">Administrador</span><span v-else-if="props.item.tipo == 0">Supervisor</span><span v-else-if="props.item.tipo == 2">Colaborador</span></td>
+
                 <td>
-                  <v-btn icon flat><v-icon >edit</v-icon></v-btn>
-                  <v-btn icon flat @click.prevent="excluir(props.item)"><v-icon >delete_sweep</v-icon></v-btn>
+                  <v-btn icon flat small><v-icon >edit</v-icon></v-btn>
+                  <v-btn icon flat small @click.prevent="excluir(props.item)"><v-icon >block</v-icon></v-btn>
+                  <v-btn icon flat small @click.prevent="excluir(props.item)"><v-icon >vpn_key</v-icon></v-btn>
                 </td>
               </template>
             </v-data-table>
@@ -115,9 +119,11 @@ export default {
       headers: [
         //{ text: 'ID', value: 'id', align: 'left' },
         { text: 'Nome', value: 'nome', align: 'left' },
+        { text: 'E-mail', value: 'email', align: 'left' },
         { text: 'RG', value: 'rg', align: 'left' },
         { text: 'CPF', value: 'cpf', align: 'left' },
         { text: 'Idade', value: 'idade', align: 'left' },
+        { text: 'Tipo', value: 'tipo', align: 'left' },
         { text: ''}
       ],
       items: []
